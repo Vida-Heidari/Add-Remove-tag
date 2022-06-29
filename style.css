@@ -19,6 +19,15 @@ html {
 
 body {
   font-size: clamp(0.8rem, 5vw, 1.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(126, 213, 111, 0.8),
+    rgba(40, 180, 133, 0.8)
+  );
 }
 
 input,
@@ -29,11 +38,96 @@ input [type="text"]::placeholder {
   font-size: inherit;
 }
 
-ul {
-  list-style: none;
+.wrapper {
+  width: 49rem;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.8rem 2.5rem 2rem;
 }
 
-a {
-  text-decoration: none;
-  color: var(--white-color);
+.wrapper :where(.heading, li, li i, .detailes) {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .heading h2 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  /* margin-bottom: 1rem; */
+}
+
+.wrapper .content {
+  margin: 1rem 0;
+}
+
+.wrapper .content p {
+  font-size: 1.5rem;
+}
+
+.wrapper .content ul {
+  list-style: none;
+  display: flex;
+  border: 1px solid #e7e7e7;
+  border-radius: 5px;
+  padding: 7px;
+  margin: 1rem 0;
+}
+
+.wrapper .content ul li {
+  border: 1px solid #ebe7e7;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0.5rem 0.8rem;
+  margin: 0.5rem;
+}
+
+.wrapper .content ul li i {
+  color: #808080;
+  background: #d8d5d5;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  justify-content: center;
+  margin-left: 0.8rem;
+  cursor: pointer;
+}
+
+.wrapper .content ul input {
+  flex: 1;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.detailes {
+  justify-content: space-between;
+}
+
+.detailes button {
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 0.9rem 1.5rem;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(126, 213, 111, 0.8),
+    rgba(40, 180, 133, 0.8)
+  );
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  transition: 200ms;
+}
+
+.detailes button:hover {
+  background-image: linear-gradient(
+    to right bottom,
+
+    rgba(40, 180, 133, 0.8),
+    rgba(126, 213, 111, 0.8)
+  );
 }
