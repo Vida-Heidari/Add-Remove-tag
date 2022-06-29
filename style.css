@@ -105,10 +105,11 @@ input [type="text"]::placeholder {
 }
 
 .detailes {
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .detailes button {
+  width: 100%;
   border: none;
   outline: none;
   color: #fff;
