@@ -1,5 +1,6 @@
 const ul = document.querySelector("ul"),
-  input = ul.querySelector("input");
+  input = ul.querySelector("input"),
+  removeEl = ul.querySelector(".fa-xmark");
 
 const removeBtn = document.querySelector("button");
 
@@ -31,3 +32,8 @@ function addTag(e) {
 }
 
 input.addEventListener("keyup", addTag);
+
+removeBtn.addEventListener("click", () => {
+  tags.length = 0;
+  ul.querySelectorAll("li").forEach((li) => li.remove());
+});
